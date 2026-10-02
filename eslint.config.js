@@ -14,7 +14,6 @@ export default defineConfig(
       '**/coverage/**',
       '**/*.d.ts',
       '**/*.tsbuildinfo',
-      'apps/server/**',
     ],
   },
 
@@ -29,7 +28,11 @@ export default defineConfig(
       sourceType: 'module',
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['eslint.config.js', 'apps/*/eslint.config.js'],
+          allowDefaultProject: [
+            'eslint.config.js',
+            'apps/*/eslint.config.js',
+            'commitlint.config.js',
+          ],
         },
       },
     },

@@ -22,8 +22,8 @@
     "composite": true,
     "tsBuildInfoFile": "./dist/.tsbuildinfo"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*spec.ts"],
+  "include": ["src/**/*", "**/*spec.ts"],
+  "exclude": ["node_modules", "dist"],
   "references": [
     {
       "path": "../../packages/ai-core"
