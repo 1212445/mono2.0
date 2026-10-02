@@ -1,0 +1,17 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "vue",
+    "vue-html",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "css",
+    "scss",
+    "less",
+    "json",
+    "jsonc",
+    "json5",
+    "markdown"
+  ]
+}

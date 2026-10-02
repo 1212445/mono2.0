@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* ========== 目标环境 ========== */
+    "target": "ES2022",
+    /* ========== 模块系统 ========== */
+    "module": "ESNext",
+    "moduleResolution": "Bundler", //"nodenext"
+    /* ========== 严格类型检查 ========== */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    /* ========== 路径解析（作用于包内部） ==========
+     * 路径值是相对父配置文件解析的，继承到子包后会指向根目录，无法正确指向子包自己的 src。
+     * 如需别名，请在各子包 tsconfig.json 中单独声明。
+     *    "paths": {
+     *      "@/*": ["./src/*"]
+     *    },
+     */
+    /* ========== 互操作性 ========== */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    /* ========== 输出产物 ========== */
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    /* ========== 健壮性 ========== */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false
+  },
+  /* ========== 排除路径 ========== */
+  "exclude": ["node_modules", "dist", "build", ".turbo", "coverage"]
+}

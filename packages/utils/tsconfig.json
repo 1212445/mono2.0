@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    // 路径解析（作用于包内部）
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "composite": true, // 启用项目引用
+    "tsBuildInfoFile": "./dist/.tsbuildinfo" // 开启增量构建
+  },
+  "include": ["src/**/*"],
+  "references": [] // 引用其他内部包
+}
