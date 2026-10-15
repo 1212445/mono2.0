@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "type": "module",
   "scripts": {
-    "prebuild": "pnpm --filter \"./packages/**\" build",
+    "prebuild": "pnpm --filter \"../../packages/**\" build",
     "build": "nest build",
     "deploy": "nest deploy",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
