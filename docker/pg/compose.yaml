@@ -1,0 +1,38 @@
+name: mono-pg
+
+services:
+  db:
+    image: postgres:18-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: '123456'
+      POSTGRES_DB: mono_db
+      # PG18 起 initdb 默认开启校验，此处显式保留
+      POSTGRES_INITDB_ARGS: --data-checksums
+      TZ: Asia/Shanghai
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U root -d mono_db']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 30s
+    shm_size: 256mb
+
+  adminer:
+    image: adminer:6
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - '127.0.0.1:8080:8080'
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

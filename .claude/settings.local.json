@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pnpm lint *)"
+      "Bash(pnpm lint *)",
+      "mcp__docs-langchain__query_docs_filesystem_docs_by_lang_chain",
+      "mcp__docs-langchain__search_docs_by_lang_chain"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "docs-langchain",
+    "reference-langchain"
+  ]
 }

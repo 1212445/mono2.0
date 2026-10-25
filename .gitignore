@@ -1,3 +1,14 @@
 node_modules
 dist
 .env
+
+# TS 增量构建缓存
+*.tsbuildinfo
+
+# 测试覆盖率
+coverage
+
+# tsc 编译产物（spec 文件与源文件同目录时可能产生）
+apps/*/test/**/*.js
+apps/*/test/**/*.js.map
+apps/*/test/**/*.d.ts

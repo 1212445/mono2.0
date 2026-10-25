@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { hello } from '@mono/ai-core';
 
 @Injectable()
 export class AppService {

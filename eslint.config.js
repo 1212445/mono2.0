@@ -14,6 +14,8 @@ export default defineConfig(
       '**/coverage/**',
       '**/*.d.ts',
       '**/*.tsbuildinfo',
+      '**/test/**/*.js',
+      '**/test/**/*.js.map',
     ],
   },
 
